@@ -1,0 +1,83 @@
+body {
+  background-color: #fff;
+  color: #fff;
+}
+
+.sign-container {
+  width: 100%;
+}
+
+.App {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #455a64;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.get-name {
+  width: 200px;
+}
+
+.name {
+  display: flex;
+  gap: 10px;
+}
+
+.birthday,
+.email,
+.password,
+.confirm-password,
+.first-name,
+.second-name {
+  display: flex;
+  flex-direction: column;
+  margin: 0.7rem 0;
+}
+
+.birthday input,
+.email input,
+.password input,
+.first-name input,
+.second-name input,
+.confirm-password input {
+  padding: 7px;
+  outline: none;
+}
+
+.button {
+  display: flex;
+  padding: 7px;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.button button {
+  padding: 7px;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
+.link:hover {
+  color: #000;
+}
+
+.App p {
+  text-align: center;
+  color: #fff;
+}
+
+label {
+  color: #fff;
+}
