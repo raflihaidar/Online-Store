@@ -2,8 +2,10 @@ import {Link} from 'react-router-dom'
 import '../style/navbar.css';
 import Swal from 'sweetalert2';
 import { FaQuestion, FaSistrix, FaCartPlus, FaInstagramSquare, FaFacebook, FaRegBell, FaGraduationCap} from "react-icons/fa";
+import { useState } from 'react';
 
 const Navbar = ({setShow, size}) => {
+    const [category, setCategory] = useState("");
     let profile;
     const fullName = localStorage.getItem("Full Name");
 
@@ -13,6 +15,10 @@ const Navbar = ({setShow, size}) => {
             title : 'ERROR!',
             text : 'Halaman ini tidak tersedia',
         });
+    }
+
+    const handleChange = (e) => {
+        setCategory(e.target.value);
     }
     
     const handleConfirm = () => {
@@ -90,17 +96,22 @@ const Navbar = ({setShow, size}) => {
                     </div>
                     <div className="search-container">
                         <div className='search'>
-                            <input type="search"  placeholder='Belanja Apa Hari Ini?' />
+                            <input 
+                            type="text"
+                            placeholder='Belanja Apa Hari Ini?' 
+                            value={category} 
+                            onChange={handleChange}
+                            />
                             <div className='search-icon'>
                                 <FaSistrix size='1rem' color='#fff'/>
                             </div>
                         </div>
                         <div className='recommendation'>
                             <ul>
-                                <li><Link className="Link" onClick={handleError}>Tas Wanita</Link></li>
-                                <li><Link className="Link" onClick={handleError}>Sepatu Wanita</Link></li>
-                                <li><Link className="Link" onClick={handleError}>Sepatu Pria</Link></li>
-                                <li><Link className="Link" onClick={handleError}>Oreo Blackpink</Link></li>
+                                <li><Link className="Link" onClick={handleError}>Men's Clothing</Link></li>
+                                <li><Link className="Link" onClick={handleError}>Women's Clothing</Link></li>
+                                <li><Link className="Link" onClick={handleError}>Jewelery</Link></li>
+                                <li><Link className="Link" onClick={handleError}>Electronics</Link></li>
                             </ul>
                         </div>
                     </div>
