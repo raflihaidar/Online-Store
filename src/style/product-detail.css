@@ -1,0 +1,44 @@
+.detail-container {
+  width: 60%;
+  height: 500px;
+  display: flex;
+  margin: 2em auto;
+  align-items: center;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  gap: 5em;
+}
+
+.detail-image {
+  display: flex;
+  margin: auto;
+  padding: 2em;
+}
+
+.detail-image img {
+  width: 300px;
+  height: 300px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.detail-title,
+.detail-price {
+  color: #000;
+}
+
+.detail-desc {
+  width: 50%;
+  color: #000;
+}
+
+.action button {
+  margin-right: 10px;
+  background-color: #455a64;
+  border: none;
+  width: 200px;
+  padding: 10px;
+}
